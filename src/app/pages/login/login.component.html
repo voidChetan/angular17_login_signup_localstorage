@@ -4,19 +4,19 @@
         <div class="form-container sign-up" >
             <form>
                 <h1>Crear Cuenta</h1>
-                <span>o usa tu email y registrate</span>
-                <input type="text" name="name" [(ngModel)]="signUpObj.name" placeholder="Name">
+                <span>Introduzca nombre, mail y tipo de entidad</span>
+                <input type="text" name="name" [(ngModel)]="signUpObj.name" placeholder="Nombre">
                 <input type="email" name="email" [(ngModel)]="signUpObj.email" placeholder="Email">
-                <input type="password" name="password"  [(ngModel)]="signUpObj.password" placeholder="Password">
-                <button (click)="onRegister()">Sign Up</button>
+                <input type="password" name="password"  [(ngModel)]="signUpObj.password" placeholder="Contraseña">
+                <button (click)="onRegister()">Crear cuenta</button>
             </form>
         </div>
         <div class="form-container sign-in" >
             <form>
                 <h1>Iniciar Sesion</h1>
-                <span>or use your email password</span>
+                <span>Introduzca mail y contraseña</span>
                 <input type="email" name="email" [(ngModel)]="loginObj.email" placeholder="Email">
-                <input type="password" name="password"   [(ngModel)]="loginObj.password" placeholder="Password">
+                <input type="password" name="password"   [(ngModel)]="loginObj.password" placeholder="Contraseña">
                 <a href="#">→ ¿Olvidaste la contraseña? ←</a>
                 <button (click)="onLogin()">Acceder</button>
             </form>
@@ -24,14 +24,14 @@
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
-                    <h1>¡Bienvenidx!</h1>
-                    <p>Enter your personal details to use all of site features</p>
-                    <button type="button" class="hidden" id="login" (click)="isSignDivVisiable = false">Sign In</button>
+                    <h1>E V O bank</h1>
+                    <p>¿Ya tienes una cuenta?</p>
+                    <button type="button" class="hidden" id="login" (click)="isSignDivVisiable = false">Conectarse</button>
                 </div>
                 <div class="toggle-panel toggle-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Register with your personal details to use all of site features</p>
-                    <button type="button" class="hidden" id="register" (click)="isSignDivVisiable = true">Sign Up</button>
+                    <h1>E V O bank</h1>
+                    <p>¿Aún no tienes cuenta?</p>
+                    <button type="button" class="hidden" id="register" (click)="isSignDivVisiable = true">Crear cuenta</button>
                 </div>
             </div>
         </div>
