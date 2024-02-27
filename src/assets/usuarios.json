@@ -1,0 +1,22 @@
+{
+    "admin":{
+        "nombre": "admin",
+        "pass": "admin"   
+    },
+    "banco":[
+        {"nombre":"BBVA", "pass":"bbva"},
+        {"nombre":"Santander", "pass":"santander"}
+    ],
+    "promotor":[
+        {"nombre": "Palomitas D", "pass": "palomitas"},
+        {"nombre":"Repuestos F", "pass":"repuestos"}
+    ],
+    "cliente":[
+        {"nombre": "Juan", "pass": "juan"},
+        {"nombre": "Maria", "pass": "maria"},
+        {"nombre": "Carlos", "pass": "carlos"},
+        {"nombre": "Ana", "pass": "ana"},
+        {"nombre": "Pedro", "pass": "pedro"}
+    ]
+    
+}
