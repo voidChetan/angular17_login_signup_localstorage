@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-peticiones',
-  standalone: true,
   templateUrl: './peticiones.component.html',
   styleUrls: ['./peticiones.component.css']
 })
