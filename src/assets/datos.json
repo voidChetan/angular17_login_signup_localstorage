@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "promotor": "Palomitas D",
+        "entidad": "BBVA",
+        "cantidadTotal": 10000,
+        "mensual": 500
+    },
+    {   
+        "id": 2,
+        "nombre": "Maria",
+        "apellido": "Gomez",
+        "promotor": "Palomitas D",
+        "entidad": "BBVA",
+        "cantidadTotal": 15000,
+        "mensual": 600
+    },
+    {   
+        "id": 3,
+        "nombre": "Carlos",
+        "apellido": "Rodriguez",
+        "promotor": "Repuestos F",
+        "entidad": "BBVA",
+        "cantidadTotal": 8000,
+        "mensual": 400
+    },
+    {   
+        "id": 4,
+        "nombre": "Ana",
+        "apellido": "Martinez",
+        "promotor": "Repuestos F",
+        "entidad": "BBVA",
+        "cantidadTotal": 12000,
+        "mensual": 550
+    },
+    {   
+        "id": 5,
+        "nombre": "Pedro",
+        "apellido": "Sanchez",
+        "promotor": "Repuestos F",
+        "entidad": "BBVA",
+        "cantidadTotal": 18000,
+        "mensual": 700
+    }
+    
+]
