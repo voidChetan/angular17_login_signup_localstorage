@@ -7,13 +7,15 @@ import { LoginComponent } from './pages/login/login.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { PeticionesComponent } from './peticiones/peticiones.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LayoutComponent,
-    DashboardComponent
+    DashboardComponent,
+    PeticionesComponent
   ],
   imports: [
     BrowserModule,
