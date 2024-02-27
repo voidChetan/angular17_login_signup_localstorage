@@ -14,10 +14,11 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(express.static('assets'));
+app.use(express.static(__dirname + '/dist'));
 
 const filePath = path.join(__dirname, 'src', 'assets/datos.json');
 
-app.get('/clientes', async (req, res) => {
+app.get('/consultas', async (req, res) => {
     try {
         const contenido = await fs.promises.readFile(filePath);
         res.json(JSON.parse(contenido));

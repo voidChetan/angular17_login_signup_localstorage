@@ -55,11 +55,13 @@ export class SignUpModel  {
   name: string;
   email: string;
   password: string;
+  userType: string;
 
   constructor() {
     this.email = "";
     this.name = "";
     this.password= ""
+    this.userType = "";
   }
 }
 

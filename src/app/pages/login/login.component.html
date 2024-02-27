@@ -8,6 +8,13 @@
                 <input type="text" name="name" [(ngModel)]="signUpObj.name" placeholder="Nombre">
                 <input type="email" name="email" [(ngModel)]="signUpObj.email" placeholder="Email">
                 <input type="password" name="password"  [(ngModel)]="signUpObj.password" placeholder="Contraseña">
+                <select name="userType" id="userType" [(ngModel)]="signUpObj.userType">
+                    <option value="" disabled selected>Tipo de usuario</option>
+                    <option value="cliente">Cliente</option>
+                    <option value="promotor">Promotor</option>
+                    <option value="entidad">Entidad</option>
+                    <option value="admin">Admin</option>
+                </select>
                 <button (click)="onRegister()">Crear cuenta</button>
             </form>
         </div>

@@ -9,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ConsultasComponent implements OnInit{
   // public listaClientes:{id:number, nombre:string, apellido:string}[] = clientes;
-
   http = inject(HttpClient);
   clientes:any = [];
 
@@ -18,7 +17,7 @@ export class ConsultasComponent implements OnInit{
   }
 
   fetchClientes(){
-    this.http.get('http://localhost:3001/clientes')
+    this.http.get('http://localhost:3001/consultas')
     .subscribe((clientes: any) =>{
       console.log(clientes);
       this.clientes = clientes;
