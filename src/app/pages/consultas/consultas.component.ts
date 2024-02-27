@@ -1,12 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 //import clientes from '../../assets/datos.json';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-consultas',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './consultas.component.html',
   styleUrl: './consultas.component.css'
 })
