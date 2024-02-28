@@ -12,9 +12,8 @@ export class ConsultasComponent{
   // public listaClientes:{id:number, nombre:string, apellido:string}[] = clientes;
   // http = inject(HttpClient);
   // clientes:any = [];
-  userType: string = '';
   clientes: any = [
-    {"nombre": "Juan", "apellido": "perez"},
+    {"nombre": "AAAAAAAAAAAAAA", "apellido": "perez"},
     {"nombre": "Maria", "apellido": "merlo"},
     {"nombre": "Carlos", "apellido": "perez"},
     {"nombre": "Ana", "apellido": "sanchez"},
@@ -29,6 +28,10 @@ export class ConsultasComponent{
     }
   }
 
+  pintar(){
+    console.log(this.clientes);
+    localStorage.setItem('clientes', JSON.stringify(this.clientes));
+  }
   // ngOnInit(): void {
   //     this.fetchClientes();
   // }

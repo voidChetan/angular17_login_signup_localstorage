@@ -10,6 +10,7 @@
         <li>Nombre: {{cliente.nombre}} - Apellido: {{cliente.apellido}}</li>
     }
 </ul>
+<button class="btn btn-primary" type="button" (click)="pintar()">Pintar clientes</button>
 @if (loggedUser.userType === 'admin') {
     <p> Esto solo lo ves si eres admin y lo de abajo es un componente entero! con sus funciones y todo</p>
     <app-dashboard></app-dashboard>

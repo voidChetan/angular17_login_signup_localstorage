@@ -43,8 +43,8 @@ export class LoginComponent {
         alert("Redirigiendo a tu área personal...");
         localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
         console.log('isUserPresent: ' + isUserPresent);
-        console.log(isUserPresent.userType);
-        this.router.navigateByUrl('/consultas');
+        console.log(isUserPresent);
+        this.router.navigateByUrl('/consultas'); 
       } else {
         alert("Credenciales incorrectas, o usuario inexistente.")
       }

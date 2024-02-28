@@ -1,1 +1,8 @@
 <p>dashboard works!</p>
+<button class="btn btn-primary" type="button" (click)="verClientes()">ver clientes</button>
+```
+<ul>
+    @for (cliente of clientes; track cliente.id) {
+        <li>Nombre: {{cliente.nombre}} - Apellido: {{cliente.apellido}}</li>
+    }
+</ul>
