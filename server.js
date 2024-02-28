@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 const port = 3001;
 const cors = require('cors');
@@ -20,7 +20,7 @@ const filePath = path.join(__dirname, 'src', 'assets/datos.json');
 
 app.get('/consultas', async (req, res) => {
     try {
-        const contenido = await fs.promises.readFile(filePath);
+        const contenido = await fs.readFile(filePath);
         res.json(JSON.parse(contenido));
     } catch (error) {
         console.error('Error al leer el archivo JSON: ', error);
@@ -32,13 +32,13 @@ app.post('/formulario', async (req, res) => {
     const peticionesFormulario = req.body;
     let data;
     try {
-        data = JSON.parse(await fs.promises.readFile(filePath));
+        data = JSON.parse(await fs.readFile(filePath));
     } catch (err) {
         data = [];
     }
     data.push(peticionesFormulario);
     try {
-        await fs.promises.writeFile(filePath, JSON.stringify(data));
+        await fs.writeFile(filePath, JSON.stringify(data));
         res.status(200).send('Datos guardados correctamente');
     } catch (error) {
         console.error('Error al escribir en el archivo JSON: ', error);

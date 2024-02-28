@@ -29,7 +29,7 @@ export class LoginComponent {
       users.push(this.signUpObj);
       localStorage.setItem('angular17users', JSON.stringify(users))
     }
-    alert('Registration Success')
+    alert('Registroso exitoso')
   }
 
   onLogin() {
@@ -40,11 +40,13 @@ export class LoginComponent {
 
       const isUserPresent =  users.find( (user:SignUpModel)=> user.email == this.loginObj.email && user.password == this.loginObj.password);
       if(isUserPresent != undefined) {
-        alert("User Found...");
+        alert("Redirigiendo a tu área personal...");
         localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
-        this.router.navigateByUrl('/dashboard');
+        console.log('isUserPresent: ' + isUserPresent);
+        console.log(isUserPresent.userType);
+        this.router.navigateByUrl('/consultas');
       } else {
-        alert("No User Found")
+        alert("Credenciales incorrectas, o usuario inexistente.")
       }
     }
   }
