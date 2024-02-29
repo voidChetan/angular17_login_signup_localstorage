@@ -1,6 +1,4 @@
 import { Component, OnInit, inject } from '@angular/core';
-//import clientes from '../../assets/datos.json';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,9 +7,6 @@ import { Router } from '@angular/router';
   styleUrl: './consultas.component.css'
 })
 export class ConsultasComponent{
-  // public listaClientes:{id:number, nombre:string, apellido:string}[] = clientes;
-  // http = inject(HttpClient);
-  // clientes:any = [];
   clientes: any = [
     {"nombre": "AAAAAAAAAAAAAA", "apellido": "perez"},
     {"nombre": "Maria", "apellido": "merlo"},
@@ -32,15 +27,4 @@ export class ConsultasComponent{
     console.log(this.clientes);
     localStorage.setItem('clientes', JSON.stringify(this.clientes));
   }
-  // ngOnInit(): void {
-  //     this.fetchClientes();
-  // }
-
-  // fetchClientes(){
-  //   this.http.get('http://localhost:3001/consultas')
-  //   .subscribe((clientes: any) =>{
-  //     console.log(clientes);
-  //     this.clientes = clientes;
-  //   })
-  // }
 }
