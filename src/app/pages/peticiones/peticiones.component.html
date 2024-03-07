@@ -1,0 +1,34 @@
+<h2>Formulario de Peticiones</h2>
+
+<form id="formularioPeticiones" (ngSubmit)="enviarDatos({nombre: nombre.value, apellido: apellido.value})">
+  <label for="nombre">Nombre:</label><br>
+  <input type="text" id="nombre" name="nombre" #nombre><br>
+  <label for="apellido">Apellido:</label><br>
+  <input type="text" id="apellido" name="apellido" #apellido><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<script>
+document.getElementById('formularioPeticiones').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const nombre = document.getElementById('nombre').value;
+  const apellido = document.getElementById('apellido').value;
+
+  fetch('http://localhost:3001/formulario', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      nombre: nombre,
+      apellido: apellido,
+    }),
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+});
+</script>

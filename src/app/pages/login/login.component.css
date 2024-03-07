@@ -87,6 +87,17 @@
     outline: none;
 }
 
+.container select{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
 .form-container{
     position: absolute;
     top: 0;
@@ -120,7 +131,7 @@
 }
 
 @keyframes move{
-    0%, 49.99%{
+    0%, 49%{
         opacity: 0;
         z-index: 1;
     }

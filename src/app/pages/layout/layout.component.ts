@@ -18,6 +18,6 @@ export class LayoutComponent {
 
   onLogoff() {
     localStorage.removeItem('loggedUser');
-    this.router.navigateByUrl('/login')
+    this.router.navigateByUrl('/login');
   }
 }

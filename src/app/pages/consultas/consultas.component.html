@@ -1,0 +1,17 @@
+<!-- <ul>
+    @for (cliente of listaClientes; track cliente.id) {
+        <li>Nombre: {{cliente.nombre}} - Apellido: {{cliente.apellido}}</li>
+    }
+</ul> -->
+<h1>{{ loggedUser.userType }}</h1>
+<h2>Lista de Consultas de {{loggedUser.name}}</h2>
+<ul>
+    @for (cliente of clientes; track cliente.id) {
+        <li>Nombre: {{cliente.nombre}} - Apellido: {{cliente.apellido}}</li>
+    }
+</ul>
+<button class="btn btn-primary" type="button" (click)="pintar()">Pintar clientes</button>
+@if (loggedUser.userType === 'admin') {
+    <p> Esto solo lo ves si eres admin y lo de abajo es un componente entero! con sus funciones y todo</p>
+    <app-dashboard></app-dashboard>
+}

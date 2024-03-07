@@ -3,47 +3,42 @@
     <div class="container" [ngClass]="isSignDivVisiable ? 'active' :'' " id="container">
         <div class="form-container sign-up" >
             <form>
-                <h1>Create Account</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registeration</span>
-                <input type="text" name="name" [(ngModel)]="signUpObj.name" placeholder="Name">
+                <h1>Crear Cuenta</h1>
+                <span>Introduzca nombre, mail y tipo de entidad</span>
+                <input type="text" name="name" [(ngModel)]="signUpObj.name" placeholder="Nombre">
                 <input type="email" name="email" [(ngModel)]="signUpObj.email" placeholder="Email">
-                <input type="password" name="password"  [(ngModel)]="signUpObj.password" placeholder="Password">
-                <button (click)="onRegister()">Sign Up</button>
+                <input type="password" name="password"  [(ngModel)]="signUpObj.password" placeholder="Contraseña">
+                <select name="userType" id="userType" [(ngModel)]="signUpObj.userType">
+                    <option value="" disabled selected>Tipo de usuario</option>
+                    <option value="cliente">Cliente</option>
+                    <option value="promotor">Promotor</option>
+                    <option value="entidad">Entidad</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <button (click)="onRegister()">Crear cuenta</button>
             </form>
         </div>
         <div class="form-container sign-in" >
             <form>
-                <h1>Sign In</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email password</span>
+                <h1>Iniciar Sesion</h1>
+                <span>Introduzca mail y contraseña</span>
                 <input type="email" name="email" [(ngModel)]="loginObj.email" placeholder="Email">
-                <input type="password" name="password"   [(ngModel)]="loginObj.password" placeholder="Password">
-                <a href="#">→ Forget Your Password? ←</a>
-                <button (click)="onLogin()">Sign In</button>
+                <input type="password" name="password"   [(ngModel)]="loginObj.password" placeholder="Contraseña">
+                <a href="#">→ ¿Olvidaste la contraseña? ←</a>
+                <button (click)="onLogin()">Acceder</button>
             </form>
         </div>
         <div class="toggle-container">
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of site features</p>
-                    <button type="button" class="hidden" id="login" (click)="isSignDivVisiable = false">Sign In</button>
+                    <h1>E V O bank</h1>
+                    <p>¿Ya tienes una cuenta?</p>
+                    <button type="button" class="hidden" id="login" (click)="isSignDivVisiable = false">Conectarse</button>
                 </div>
                 <div class="toggle-panel toggle-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Register with your personal details to use all of site features</p>
-                    <button type="button" class="hidden" id="register" (click)="isSignDivVisiable = true">Sign Up</button>
+                    <h1>E V O bank</h1>
+                    <p>¿Aún no tienes cuenta?</p>
+                    <button type="button" class="hidden" id="register" (click)="isSignDivVisiable = true">Crear cuenta</button>
                 </div>
             </div>
         </div>

@@ -7,13 +7,17 @@ import { LoginComponent } from './pages/login/login.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
+import { PeticionesComponent } from './pages/peticiones/peticiones.component';
+import { ConsultasComponent } from './pages/consultas/consultas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LayoutComponent,
-    DashboardComponent
+    DashboardComponent,
+    PeticionesComponent,
+    ConsultasComponent
   ],
   imports: [
     BrowserModule,
